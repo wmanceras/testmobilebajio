@@ -9,68 +9,10 @@
 
 <body>
 
-	<button type="button" class="btn btn-primary btn-lg" onclick="refreshFunction()">
-        Ejecutar Refresh
-    </button>
-	
-	<button type="button" class="btn btn-primary btn-lg" onclick="nextFunction()">
-        Ejecutar Next
-    </button>
-	
-	<button type="button" class="btn btn-primary btn-lg" onclick="authFunction()">
-        Ejecutar Auth
-    </button>
-	
-	<button type="button" class="btn btn-primary btn-lg" onclick="finishFunction()">
-        Ejecutar Finish
-    </button>
+    <a href= "bajionetmovil://path/test?origin=centric&operation=leave">Landing</a>
 
-    <script>
-        function refreshFunction() {
-            let target = window.parent;
-            target.postMessage(
-                {
-                     
-                    "operation": "refresh",
-                    "user": ""
-                    
-                }, "*");
-        }
-		
-		function nextFunction() {
-            let target = window.parent;
-            target.postMessage(
-                {
-                     
-                    "operation": "leave",
-                    "user": ""
-                    
-                }, "*");
-        }
-		
-		function authFunction() {
-            let target = window.parent;
-            target.postMessage(
-                {
-                     
-                    "operation": "auth",
-                    "user": ""
-                    
-                }, "*");
-        }
-		
-		function finishFunction() {
-            let target = window.parent;
-            target.postMessage(
-                {
-                     
-                    "operation": "finish",
-                    "user": ""
-                    
-                }, "*");
-        }
-		
-    </script>
+	<a href= "bajionetmovil://path/test?origin=centric&operation=leave">Finalizar</a>
+
 </body>
 
 </html>
