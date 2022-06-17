@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+	<button type="button" class="btn btn-primary btn-lg" onclick="refreshFunction()">
+        Ejecutar Refresh
+    </button>
+	
+	<button type="button" class="btn btn-primary btn-lg" onclick="nextFunction()">
+        Ejecutar Next
+    </button>
+	
+	<button type="button" class="btn btn-primary btn-lg" onclick="authFunction()">
+        Ejecutar Auth
+    </button>
+	
+	<button type="button" class="btn btn-primary btn-lg" onclick="finishFunction()">
+        Ejecutar Finish
+    </button>
+
+    <script>
+        function refreshFunction() {
+            let target = window.parent;
+            target.postMessage(
+                {
+                     
+                    "operation": "refresh",
+                    "user": ""
+                    
+                }, "*");
+        }
+		
+		function nextFunction() {
+            let target = window.parent;
+            target.postMessage(
+                {
+                     
+                    "operation": "leave",
+                    "user": ""
+                    
+                }, "*");
+        }
+		
+		function authFunction() {
+            let target = window.parent;
+            target.postMessage(
+                {
+                     
+                    "operation": "auth",
+                    "user": ""
+                    
+                }, "*");
+        }
+		
+		function finishFunction() {
+            let target = window.parent;
+            target.postMessage(
+                {
+                     
+                    "operation": "finish",
+                    "user": ""
+                    
+                }, "*");
+        }
+		
+    </script>
+</body>
+
+</html>
