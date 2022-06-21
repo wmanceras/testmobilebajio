@@ -66,27 +66,27 @@
 
 <script>
 function functionRedirect() {
-  window.location.href = "http://bajionetmovil://path/test?origin=centric&operation=leave";
+  window.location = "bajionetmovil://path/test?origin=centric&operation=leave";
 }
 
 function functionReplace() {
-  location.replace("http://bajionetmovil://path/test?origin=centric&operation=leave")
+  window.location.assign("bajionetmovil://path/test?origin=centric&operation=leave")
 }
 
 function functionRedirects() {
-  window.location.href = "https://bajionetmovil://path/test?origin=centric&operation=leave";
+  window.location.replace("bajionetmovil://path/test?origin=centric&operation=leave");
 }
 
 function functionReplaces() {
-  location.replace("https://bajionetmovil://path/test?origin=centric&operation=leave")
-}
-
-function functionRedirectD() {
   window.location.href = "bajionetmovil://path/test?origin=centric&operation=leave";
 }
 
+function functionRedirectD() {
+  self.location = "bajionetmovil://path/test?origin=centric&operation=leave";
+}
+
 function functionReplaceD() {
-  location.replace("bajionetmovil://path/test?origin=centric&operation=leave")
+  top.location = "bajionetmovil://path/test?origin=centric&operation=leave";
 }
 </script>
 
