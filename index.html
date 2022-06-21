@@ -52,9 +52,13 @@
 <a href="https://bajionetmovil://path/test?origin=centric&operation=leave" target="framename" ><div class="nuevolink">https Leave</div></a>
 <a href="https://bajionetmovil://path/test?origin=centric&operation=finish" target="framename" ><div class="nuevolink">https finish</div></a>
 
-<button onclick="functionRedirect()">Redirect document</button>
+<button onclick="functionRedirect()">Redirect http</button>
 
-<button onclick="functionReplace()">Replace document</button>
+<button onclick="functionReplace()">Replace http</button>
+
+<button onclick="functionRedirects()">Redirect https</button>
+
+<button onclick="functionReplaces()">Replace https</button>
 
 <button onclick="functionRedirectD()">Redirect document D</button>
 
@@ -62,15 +66,23 @@
 
 <script>
 function functionRedirect() {
-  window.location.href = "http://stackoverflow.com";
+  window.location.href = "http://bajionetmovil://path/test?origin=centric&operation=leave";
 }
 
 function functionReplace() {
-  location.replace("https://www.w3schools.com")
+  location.replace("http://bajionetmovil://path/test?origin=centric&operation=leave")
+}
+
+function functionRedirects() {
+  window.location.href = "https://bajionetmovil://path/test?origin=centric&operation=leave";
+}
+
+function functionReplaces() {
+  location.replace("https://bajionetmovil://path/test?origin=centric&operation=leave")
 }
 
 function functionRedirectD() {
-  window.location.href = "http://stackoverflow.com";
+  window.location.href = "bajionetmovil://path/test?origin=centric&operation=leave";
 }
 
 function functionReplaceD() {
