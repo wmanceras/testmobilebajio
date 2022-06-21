@@ -56,12 +56,24 @@
 
 <button onclick="functionReplace()">Replace document</button>
 
+<button onclick="functionRedirectD()">Redirect document D</button>
+
+<button onclick="functionReplaceD()">Replace document D</button>
+
 <script>
 function functionRedirect() {
   window.location.href = "http://stackoverflow.com";
 }
 
 function functionReplace() {
+  location.replace("https://www.w3schools.com")
+}
+
+function functionRedirectD() {
+  window.location.href = "http://stackoverflow.com";
+}
+
+function functionReplaceD() {
   location.replace("https://www.w3schools.com")
 }
 </script>
