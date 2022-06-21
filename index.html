@@ -52,6 +52,21 @@
 <a href="https://bajionetmovil://path/test?origin=centric&operation=leave" target="framename" ><div class="nuevolink">https Leave</div></a>
 <a href="https://bajionetmovil://path/test?origin=centric&operation=finish" target="framename" ><div class="nuevolink">https finish</div></a>
 
+<button onclick="functionRedirect()">Redirect document</button>
+
+<button onclick="functionReplace()">Replace document</button>
+
+<script>
+function functionRedirect() {
+  window.location.href = "http://stackoverflow.com";
+}
+
+function functionReplace() {
+  location.replace("https://www.w3schools.com")
+}
+</script>
+
+
 </body>
 
 </html>
