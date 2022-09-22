@@ -13,16 +13,16 @@
         Ejecutar Refresh
     </button>
 	
-	<button type="button" class="btn btn-primary btn-lg" onclick="nextFunction()">
-        Ejecutar Next
+	<button type="button" class="btn btn-primary btn-lg" onclick="leaveFunction()">
+        Ejecutar Finish
     </button>
 	
 	<button type="button" class="btn btn-primary btn-lg" onclick="authFunction()">
         Ejecutar Auth
     </button>
 	
-	<button type="button" class="btn btn-primary btn-lg" onclick="finishFunction()">
-        Ejecutar Finish
+	<button type="button" class="btn btn-primary btn-lg" onclick="errorFunction()">
+        Ejecutar Error
     </button>
 
     <script>
@@ -38,7 +38,7 @@
                 }, "*");
         }
 		
-		function nextFunction() {
+		function leaveFunction() {
             let target = window.parent;
             target.postMessage(
                 {
@@ -62,17 +62,26 @@
                 }, "*");
         }
 		
-		function finishFunction() {
+		function errorFunction() {
             let target = window.parent;
             target.postMessage(
                 {
                      
-                    "operation": "finish",
+                    "operation": "error",
                     "user": "",
 					"origin": "centric"
                     
                 }, "*");
         }
+		
+		target.postMessage(
+{
+operation: 'finish',
+error: err || '',
+user: '',
+},
+'http://co-bnbd-01.veritran.net:8080'
+);
 		
     </script>
 </body>
