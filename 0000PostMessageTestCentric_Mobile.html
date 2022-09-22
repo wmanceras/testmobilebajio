@@ -10,19 +10,23 @@
 <body>
 
 	<button type="button" class="btn btn-primary btn-lg" onclick="refreshFunction()">
-        Ejecutar Refresh
+        Ejecutar Refrescar
     </button>
 	
 	<button type="button" class="btn btn-primary btn-lg" onclick="leaveFunction()">
-        Ejecutar Finish
+        Ejecutar Finalizar
     </button>
 	
 	<button type="button" class="btn btn-primary btn-lg" onclick="authFunction()">
-        Ejecutar Auth
+        Ejecutar Autorizar
     </button>
 	
 	<button type="button" class="btn btn-primary btn-lg" onclick="errorFunction()">
         Ejecutar Error
+    </button>
+	
+	<button type="button" class="btn btn-primary btn-lg" onclick="backFunction()">
+        Ejecutar Regresar
     </button>
 
     <script>
@@ -68,6 +72,18 @@
                 {
                      
                     "operation": "error",
+                    "user": "",
+					"origin": "centric"
+                    
+                }, "*");
+        }
+		
+		function backFunction() {
+            let target = window.parent;
+            target.postMessage(
+                {
+                     
+                    "operation": "back",
                     "user": "",
 					"origin": "centric"
                     
