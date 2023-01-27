@@ -5,11 +5,11 @@
   </head>
   <body>	
       <form action="https://kong.stratiodev.bb.com.mx/sac/proceso-negocio/migraciones/api/v1/redirect" method="POST">
-	 	  <input id="access_token" name="access_token" value="" type="hidden"></input>
-	 	  <input id="origin" name="origin" value="" type="hidden"></input>
-		  <input id="uid_code" name="uid_code" value="" type="hidden"></input>
-		  <input id="operation" name="operation" value="" type="hidden"></input>
-		  <input id="businessProcessCode" name="businessProcessCode" value="" type="hidden"></input>
+	 	  <input id="access_token" name="access_token" type="text"></input>
+	 	  <input id="origin" name="origin" type="text"></input>
+		  <input id="uid_code" name="uid_code" type="text"></input>
+		  <input id="operation" name="operation" type="text"></input>
+		  <input id="businessProcessCode" name="businessProcessCode" type="text"></input>
 		<input id="boton" type="submit">
 	  </form>
 
@@ -35,7 +35,7 @@
 			//document.getElementById('access_token').value=tkn_image;
             //document.getElementById('uid_code').value=uid_code;		
             document.cookie = "COOKIE_BEARERTESTD="+uid_code;			
-			document.getElementById("boton").click();
+			//document.getElementById("boton").click();
 		}
       window.onload = loadSite();
 	  </script>
