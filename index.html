@@ -4,6 +4,41 @@
 
   </head>
   <body>	
+      <form action="https://kong.stratiodev.bb.com.mx/sac/proceso-negocio/migraciones/api/v1/redirect" method="POST">
+	 	  <input id="access_token" name="access_token" value="" type="hidden"></input>
+	 	  <input id="origin" name="origin" value="" type="hidden"></input>
+		  <input id="uid_code" name="uid_code" value="" type="hidden"></input>
+		  <input id="operation" name="operation" value="" type="hidden"></input>
+		  <input id="businessProcessCode" name="businessProcessCode" value="" type="hidden"></input>
+		<input id="boton" type="submit">
+	  </form>
+
+	  <script>
+		function loadSite() {
+			const queryString = window.location.search;
+			const urlParams = new URLSearchParams(queryString);
+			const mi_image = urlParams.get('my_image');
+			const origin = urlParams.get('origin');
+			const uid_code = urlParams.get('uid_code');
+			const businessProcessCode = urlParams.get('businessProcessCode');
+			document.getElementById('access_token').value=mi_image;	
+			document.getElementById('origin').value=origin;	
+			document.getElementById('uid_code').value=uid_code;
+			document.getElementById('operation').value=uid_code;
+			document.getElementById('businessProcessCode').value=businessProcessCode;
+			//const arrayParams = mi_image.split("parametro");
+			//let origin = arrayParams[0];
+			//let tkn_image = arrayParams[1];
+			//let uid_code = arrayParams[2];
+			//const origin = urlParams.get('origin');
+			//document.getElementById('origin').value=origin;	
+			//document.getElementById('access_token').value=tkn_image;
+            //document.getElementById('uid_code').value=uid_code;		
+            document.cookie = "COOKIE_BEARERTESTD="+uid_code;			
+			document.getElementById("boton").click();
+		}
+      window.onload = loadSite();
+	  </script>
 	 <p>POST MESSAGE FINALIZAR<br><a href="bajionetmovil://path/test?origin=centric&operation=leave">Ejecutar FINALIZAR</a>.</p>
 	 <br>
 	 <p>POST MESSAGE ERROR<br><a href="bajionetmovil://path/test?origin=centric&operation=error">Ejecutar ERROR</a>.</p>
